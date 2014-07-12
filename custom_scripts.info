@@ -1,0 +1,3 @@
+name = "Custom Scripts"
+description = "Add js and css files to Drupal"
+core = 7.x

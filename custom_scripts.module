@@ -1,0 +1,102 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_init().
+ */
+function custom_scripts_init() {
+	$basepath = drupal_get_path('module', 'custom_scripts');
+	drupal_add_js($basepath . '/custom_scripts.js', array('type' => 'file', 'weight' => 999));
+	drupal_add_css($basepath . '/custom_scripts.css', array('type' => 'file', 'weight' => 999));
+  
+  // Add a variable for uid. See at https://drupal.org/node/828916
+  global $user;
+  drupal_add_js(array('currentUser' => $user->uid), 'setting');
+}
+
+// Save a field date value as content post date
+function custom_scripts_node_presave($node) {
+  if ($node->type == 'news') {
+    $node->created = strtotime($node->field_publish_date['und'][0]['value']);
+  }
+}
+
+// Alter forms (hide elements from users)
+function custom_scripts_form_alter(&$form, &$form_state, $form_id) {
+  //dpm($form);
+  global $user;
+  if ($user->uid != 1) {
+    switch ($form_id)  {
+      // Blocks
+      case 'block_admin_configure':
+        $form['settings']['title']['#title'] = 'Title';
+        $form['regions']['#access'] = FALSE;
+        $form['visibility_title']['#access'] = FALSE;
+        $form['visibility']['#access'] = FALSE;
+        $form['actions']['submit']['#value'] = 'Save';
+      break;
+      
+      // Node type contact_information node
+      case 'contact_information_node_form':
+        $form['additional_settings']['#access'] = FALSE;
+      break;
+      
+      // Node type simple_page node
+      case 'simple_page_node_form':
+        $form['additional_settings']['#access'] = FALSE;
+      break;
+      
+      // Node type local_links node
+      case 'local_links_node_form':
+        //$form['#node']['menu']['#access'] = FALSE;
+      break;
+      
+      // Node type neighborhood_teaser node
+      /**
+	  case 'neighborhood_teaser_node_form':
+        $form['additional_settings']['#access'] = FALSE;
+      break;
+	  */
+      
+      // Node type sidebar node
+      case 'sidebar_node_form':
+        $nid = $form['nid']['#value'];
+        if ($nid == 69 || $nid == 70 || $nid == 71) {
+          $form['actions']['delete']['#access'] = FALSE;
+        }
+        $form['field_views']['#access'] = FALSE;
+      break;
+    }
+  }
+}
+
+// Alter image alt for top images
+function custom_scripts_field_widget_form_alter(&$element, &$form_state, $context) {
+  //dpm($context);
+  // If this is an image field type
+  if ($context['field']['field_name'] == 'field_image_top') {
+    // Loop through the element children (there will always be at least one).
+    foreach (element_children($element) as $key => $child) {
+      // Add the new process function to the element
+      //dpm($element);
+      //dpm($context);
+      $element[$key]['#process'][] = 'custom_scripts_image_field_widget_process';
+    }
+  }
+}
+
+function custom_scripts_image_field_widget_process($element, &$form_state, $form) {
+  // Change the title field label and description
+  //dpm($element);
+  //dpm($element['title']);
+  $element['title']['#title'] = 'Caption';
+  $element['title']['#description'] = 'Caption is displayed under image.';
+  
+  //$element['remove_button']['#type'] = 'hidden';
+
+  // Return the altered element
+  return $element;
+}

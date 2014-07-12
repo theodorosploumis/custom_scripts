@@ -1,0 +1,386 @@
+/* CSS custom_scripts */
+
+#edit-caching .form-item-cache,
+#edit-caching .form-item-block-cache,
+#edit-caching  #edit-captcha,
+.page-admin #edit-bandwidth-optimization,
+#edit-clear-cache legend,
+.page-admin-config-system-site-information #edit-front-page,
+.page-admin-config-system-site-information #edit-error-page,
+.page-admin-appearance-settings-vendor .form-item-toggle-favicon,
+.page-admin-appearance-settings-vendor .tabs.primary,
+.page-admin-appearance-settings-vendor .tabs-secondary,
+.page-admin-structure-menu-manage-main-menu-poweredit .tabs.primary,
+.page-admin-structure-menu-manage-menu-social-buttons-poweredit .tabs.primary,
+#menu-editor-overview-form .description,
+.page-admin-config-regional-settings .form-item-date-api-use-iso8601,
+.page-admin-config-regional-settings .form-item-configurable-timezones,
+.page-admin-structure-taxonomy .tabs.primary,
+#taxonomy-form-term .text-format-wrapper,
+#taxonomy-form-term #edit-path,
+#taxonomy-form-term #edit-relations,
+#taxonomy-form-term #edit-xmlsitemap ,
+.page-admin-dashboard .pane-taxonomy tr td:nth-child(2),
+.page-admin-people-create .tabs.primary,
+.page-admin-config-system-googleanalytics #edit-tracking-title,
+.page-admin-config-system-googleanalytics .vertical-tabs,
+.page-admin-config-system-googleanalytics #edit-googleanalytics-custom-var,
+.page-admin-config-system-googleanalytics #edit-advanced,
+.page-admin-config-system-googleanalytics #block-system-help,
+.page-admin-dashboard-files .messages.error,
+.page-media- .messages.error,
+#page-node-form .edit-menu-options-attributes,
+.node-form .field-type-geofield,
+.node-form #edit-menu-icon,
+#user-profile-form #edit-contact,
+.page-file- .tabs.primary li:first-child  {
+display: none !important;
+}
+
+.user-1 #edit-caching .form-item-cache,
+.user-1 #edit-caching .form-item-block-cache,
+.user-1  #edit-caching  #edit-captcha,
+.user-1.page-admin #edit-bandwidth-optimization {
+display: block !important;
+}
+
+#branding .breadcrumb {
+display: none;
+}
+
+.page-admin fieldset .fieldset-legend {
+position: relative;
+text-transform: uppercase;
+background: #B5B6B8;
+margin: 0;
+padding: 6px 10px;
+color: #FFF;
+font-size: 13px;
+border-radius: 3px;
+border: 2px solid #FFF;
+color: #fff;
+}
+
+.page-admin .view-header a.button {
+display: inline-block;
+width: 200px;
+border-radius: 4px;
+border: 1px solid #FFF;
+box-shadow: 1px 3px 7px #DDD;
+transition: background 1s;
+-webkit-transition: background 1s;
+color: #fff;
+}
+
+.disabled-row {
+opacity: 0.4;
+background:#E7EC67 !important;
+}
+
+#dashboard-link {
+position: fixed;
+top: 0;
+left: 0;
+background: #000;
+z-index: 100;
+border-radius: 0 0 100px 0;
+width:50px;
+height: 50px;
+border-right: 3px solid #FFF;
+border-bottom: 0px solid #FFF;
+}
+
+#dashboard-link a {
+color: #FFF;
+text-decoration: none;
+display: block;
+padding: 10px 4px;
+font-size: 13px;
+text-transform: uppercase;
+}
+
+/* Node edit */
+
+.page-node div.description p,
+.page-node .fieldset-description p,
+.page-node #help p {
+margin: 0;
+}
+
+.page-node #block-system-help,
+.page-node ul.tips,
+.page-node div.description,
+.page-node .form-item div.description,
+.page-node .form-wrapper .fieldset-description {
+background: #F5F6F7;
+border: 1px solid #F9FAF4;
+border-radius: 5px;
+font-size: 14px;
+padding: 10px;
+font-family: "Helvetica Neue", helvetica, sans-serif;
+width: 600px;
+}
+
+.node-form > div > div,
+.page-admin fieldset {
+border: 1px solid #EBEEF3;
+padding: 10px;
+margin: 25px 0;
+background: #FCFCFC;
+box-shadow: 0px 0px 12px 2px #F7F2F2;
+}
+
+.page-admin fieldset {
+width: auto;
+padding: 2.5em 0 0 0;
+}
+
+.page-admin fieldset.container-inline {
+padding: 0 20px;
+}
+
+.node-form .form-actions {
+box-shadow: none;
+background: none;
+border: none;
+}
+
+div.vertical-tabs .vertical-tabs-list {
+border-bottom: none;
+}
+
+/* Contact settings */
+
+.page-admin-structure-contact #block-system-help p:nth-child(2),
+.page-admin-structure-contact #block-system-help p:nth-child(3),
+.page-admin-config-development-maintenance #block-system-help p {
+display: none;
+}
+
+/* Dashboard pages */
+
+.page-admin-dashboard-content .tabs-secondary,
+.page-admin-dashboard-categories .tabs-secondary {
+float: left;
+width: 20%;
+padding-top: 34px;
+}
+
+.page-admin-dashboard  ul.secondary li {
+display: block;
+margin: 10px;
+}
+
+.page-admin-dashboard-content #content,
+.page-admin-dashboard-categories #content {
+float: right;
+width: 70%;
+clear: none;
+padding: 0 4%;
+border-left: 2px dashed #F8F8F8;
+}
+
+#block-block-6 {
+text-align: right;
+padding-right: 14px;
+}
+
+#block-block-6 a.button {
+background: #BD5C02;
+border: 1px solid #FFFFFF;
+border-radius: 4px 4px 4px 4px;
+box-shadow: 1px 3px 7px #DDDDDD;
+color: #FFFFFF;
+display: inline-block;
+width: 100px;
+transition: background 1s;
+-webkit-transition: background 1s;
+}
+
+#block-block-6 a.button:hover {
+background: #CE6C11;
+}
+
+.logged-in #branding {
+padding: 20px 50px 0 20px;
+}
+
+.go-back {
+margin-right: 20px;
+}
+
+.pane-1 p {
+text-align: center;
+}
+
+#help{
+border-bottom: 1px solid #F0EAEA;
+margin-bottom: 20px;
+padding-bottom: 25px;
+}
+
+.page-admin-dashboard-content .block-views {
+margin-top: 40px;
+}
+
+.page-admin-dashboard-content fieldset .fieldset-wrapper {
+padding: 0;
+}
+
+.page-admin-dashboard-content ul.secondary li a {
+background-color: #FCF7F7;
+}
+
+.page-admin-dashboard ul.menu li {
+list-style: none;
+background: #F5EDED;;
+margin-bottom: 2px;
+line-height: 36px;
+transition:background 1s;
+-webkit-transition:background 1s; /* Safari */
+}
+
+.page-admin-dashboard ul.menu li:hover,
+.page-admin-dashboard ul.menu li.active-trail {
+background: #DBDCE4;
+}
+
+.page-admin-dashboard ul.menu li a {
+width: 100%;
+display: block;
+color: #4F5072;
+}
+
+.page-admin-dashboard ul.menu li a.menu_icon {
+padding-left: 50px;
+}
+
+.page-admin-dashboard ul.menu li a:hover {
+text-decoration: none;
+}
+
+.pane-system-main-menu ul.menu li {
+padding-left: 20px;
+list-style-image: none;
+}
+
+.pane-system-main-menu .item-list ul li.expanded, 
+.pane-system-main-menu ul.menu li.expanded {
+list-style-image: none;
+list-style-type: none;
+}
+
+.pane-system-main-menu ul.menu li.expanded ul.menu {
+border-top: 2px solid #fff;
+}
+
+.page-admin-dashboard #branding h1.page-title {
+margin-left: 100px;
+}
+
+.page-admin-dashboard h2 {
+text-align: center;
+color: #FFF;
+text-transform: uppercase;
+padding: 15px 0;
+background: #666775;
+}
+
+.page-admin-dashboard .panel-pane h2 {
+margin-left: 20px;
+}
+
+.logged-in ul.primary li a:link, 
+.logged-in ul.primary li a.active, 
+.logged-in ul.primary li a:active,
+.logged-in ul.primary li a:visited, 
+.logged-in ul.primary li.active a {
+background-color: #666775;
+color: #fff;
+border-radius: 0;
+}
+
+.logged-in ul.primary li a:hover {
+color: #e4e4e4;
+}
+
+.logged-in ul.primary li.active a {
+color: #41424B;
+}
+
+.vendor-theme ul.primary li a:link, 
+.vendor-theme  ul.primary li a.active, 
+.vendor-theme  ul.primary li a:active,
+.vendor-theme  ul.primary li a:visited, 
+.vendor-theme  ul.primary li.active a {
+background-color: #F0FAED;
+color: #000;
+}
+
+.vendor-theme ul.primary li a:hover {
+color: #ddd;
+}
+
+.vendor-theme ul.primary li.active a {
+color: #41424B;
+}
+
+.page-admin-dashboard-content-homepage .region-content .block-views {
+float: left;
+padding: 0 1%;
+width: 31%;
+}
+
+/* Maintenance Page */
+
+.maintenance-page .messages,
+#system-site-maintenance-mode #edit-reload-settings,
+#system-site-maintenance-mode #edit-theme-settings,
+.form-item-mcd-time-up-message {
+display: none;
+}
+
+/* Buttons */
+
+.button.green {
+background: #15AC09;
+}
+.button.green:hover {
+background:#109605;
+}
+
+.button.gray {
+background: #AFADAD;}
+
+.button.gray:hover {
+background:#868080;
+}
+
+.button.orange {
+background: #E98E06;
+}
+.button.orange:hover {
+background:#C47F19;
+}
+
+.button.blue {
+background: #437AE6;
+}
+.button.blue:hover {
+background: #06296D;
+}
+
+.button.purple {
+background: #AD4AD8;
+}
+.button.purple:hover {
+background: #73139C;
+}
+
+.button.black {
+background: #616161;
+}
+.button.black:hover {
+background: #000000;
+}
+
